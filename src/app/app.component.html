@@ -1,11 +1,18 @@
-
 <!-- <P>{{title}}</P>
 <img src="{{url}}"> -->
 
-<p *ngIf="name">El nombre es: {{name}}</p>
-<input type="text" [(ngModel)]="name">
+<p *ngIf="name">El nombre es: {{ name }}</p>
+<input type="text" [(ngModel)]="name" />
 
 <ul *ngFor="let city of cities">
-  <li ngClass="{selected:city==='Madrid'}">{{city}} </li>
-  
+  <li
+    (click)="onCityClicked(city)"
+    [ngClass]="{ selected: city === selection }"
+  >
+    {{ city }}
+  </li>
 </ul>
+<div *ngIf="selection">
+  <p>Your city is {{ selection }}</p>
+  <button (click)="onClear()">Clear</button>
+</div>
