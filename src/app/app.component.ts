@@ -6,6 +6,7 @@ import { Component, SimpleChanges } from '@angular/core';
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
+  criteria = '';
   cities = ['Barcelona', 'Madrid', 'Sevilla', 'Bilbao', 'Salamanca'];
   name!: string;
   selection!: string;

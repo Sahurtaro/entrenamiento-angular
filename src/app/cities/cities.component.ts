@@ -14,7 +14,7 @@ import {
         (click)="onCityClicked(city)"
         [ngClass]="{ 'alert alert-info': city === selection }"
       >
-        {{ city }}
+        {{ city | titlecase }}
       </li>
     </ul>
   `,
