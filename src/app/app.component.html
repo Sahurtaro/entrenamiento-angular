@@ -11,8 +11,8 @@
       <ul>
         <app-cities
           *ngFor="let city of cities"
-          (click)="onCityClicked($event)"
-          [city]="'city'"
+          (cityClickedEvent)="onCityClicked($event)"
+          [city]="city"
           [selection]="selection"
         ></app-cities>
       </ul>
